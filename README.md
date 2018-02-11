@@ -19,7 +19,7 @@ simplified syntax.
 department) often examine different datasets, for different
 purposes. 
 
-##REACT: Next Step Suggestions for Modern Data Analysis Platforms
+## REACT: Next Step Suggestions for Modern Data Analysis Platforms
 REACT is a recommender system designated
 for modern IDA platforms, which particularly tackles the new
 challenges that they pose. Given the specific context of the user
@@ -29,7 +29,7 @@ REACT processes and adapts previous experience of other analysts
 working with the same or related datasets, in order to present the
 user with personalized next-step suggestions.
 
-##Benchmark Dataset: Real-world IDA logs.
+## Benchmark Dataset: Real-world IDA logs.
 To our knowledge, there are no publicly available repositories of analysis actions performed on modern IDA platforms.
 This benchmark dataset contains real-world analysis log in the domain of cyber security.
 
