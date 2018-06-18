@@ -1,5 +1,6 @@
 # REACT-IDA
 Benchmark dataset and source code for Modern Interactive Data Analysis (IDA) recommender systems.
+***IMPORTANT: Code and data will be published in August, 18***
 
 ## The Problem: Modern IDA Recommendations
 Modern Interactive Data Analysis (IDA) platforms, such as Kibana,
@@ -33,7 +34,7 @@ user with personalized next-step suggestions.
 To our knowledge, there are no publicly available repositories of analysis actions performed on modern IDA platforms.
 This benchmark dataset contains real-world analysis log in the domain of cyber security.
 
-**IMPORTANT: Our work is currently submitted to publication. Meanwhile, We only provide the benchmark and source code upon requiest.**
+**IMPORTANT: Our work awaits publication in KDD' 18. Meanwhile, We only provide the benchmark and source code upon requiest.**
 Please email us at **amitsome@mail.tau.ac.il** for inqueries and data requests. 
 
 ### Data Collection
