@@ -1,5 +1,4 @@
-# REACT-IDA: 
-## benchmark dataset for real users' analysis sesisons 
+# REACT-IDA: benchmark dataset for real users' analysis sesisons 
 This repository contains (1) a collection of analysis sessions made by real users in the cyber security domain.
 (2) a distance metric for analysis actions, results "displays" and analysis sessions, as described in the paper "Next-Step Suggestions for Modern Interactive Data Analysis Platforms".
 
