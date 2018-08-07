@@ -1,5 +1,5 @@
 # REACT-IDA: benchmark dataset for real users' analysis sesisons 
-This repository contains (1) a collection of analysis sessions made by real users in the cyber security domain.
+This Github repository contains (1) a collection of analysis sessions made by real users in the cyber security domain.
 (2) a distance metric for analysis actions, results "displays" and analysis sessions, as described in the paper "Next-Step Suggestions for Modern Interactive Data Analysis Platforms".
 
 The repository is free for use for academic purposes.
@@ -25,27 +25,23 @@ simplified syntax.
 department) often examine different datasets, for different
 purposes. 
 
-## REACT: Next Step Suggestions for Modern Data Analysis Platforms
-REACT is a recommender system designated
-for modern IDA platforms, which particularly tackles the new
-challenges that they pose. Given the specific context of the user
-(e.g., the analysis actions of all types performed thus far by the user,
-the results obtained, the properties of the data set at hand, etc.),
-REACT processes and adapts previous experience of other analysts
-working with the same or related datasets, in order to present the
-user with personalized next-step suggestions.
 
 ## Benchmark Dataset: Real-world IDA logs.
 To our knowledge, there are no publicly available repositories of analysis actions performed on modern IDA platforms.
 This benchmark dataset contains real-world analysis log in the domain of cyber security.
 
-**IMPORTANT: Our work awaits publication in KDD' 18. Meanwhile, We only provide the benchmark and source code upon requiest.**
-Please email us at **amitsome@mail.tau.ac.il** for inqueries and data requests. 
-
 ### Data Collection
 We recruited 56 analysts, specializing in the domain of cyber-security (via dedicated forums, network security firms, and volunteer senior students from the Israeli National Cyber-Security Program), and asked them to analyze 4 different datasets using a prototype web-based analysis platform that we developed.
 Each dataset, provided by the "Honeynet Project", contains between 350 to 13K rows of raw network logs that may reveal a distinct security event, e.g. malware communication hidden in network traffic, hacking activity inside a local network, an IP range/port scan, etc. (there is no connection between the tuples of different datasets).
 The analysts were asked to perform as many analysis actions as required to reveal the details of the underlying security event of each dataset.
+
+### How to use
+The four datasets analyzed by the users are in ./raw_datasets.
+The folder ./session_repositories contains the files: (1) actions.tsv, that contains the actions performed by the analysts, and (2) displays.tsv that contains a structural summary of the actions' result sets. 
+Last, The folder ./lib contains helper scripts that allow to recreate the actions performed by the users and to examine their actual results as seen by the user at each point of the session.
+Also, it contains the code of the distance metric for analysis actions and displays, as appear in the paper "Next-Step Suggestions for Modern Interactive Data Analysis Platforms"
+
+We provide a Jupyter Notebook with a getting started code. 
 
  
 
