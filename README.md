@@ -1,6 +1,11 @@
-# REACT-IDA
-Benchmark dataset and source code for Modern Interactive Data Analysis (IDA) recommender systems.
-***IMPORTANT: Code and data will be published in August, 18***
+# REACT-IDA: benchmark dataset for real users' analysis sesisons 
+This repository contains (1) a collection of analysis sessions made by real users in the cyber security domain.
+(2) a distance metric for analysis actions, results "displays" and analysis sessions, as described in the paper "Next-Step Suggestions for Modern Interactive Data Analysis Platforms".
+
+The repository is free for use for academic purposes.
+Upon using, please cite the following paper:
+
+Tova Milo and Amit Somech. 2018. Next-Step Suggestions for Modern Interactive Data Analysis Platforms. In Proceedings of the 24th ACM SIGKDD International Conference on Knowledge Discovery & Data Mining (KDD '18). ACM, New York, NY, USA, 576-585. DOI: https://doi.org/10.1145/3219819.3219848
 
 ## The Problem: Modern IDA Recommendations
 Modern Interactive Data Analysis (IDA) platforms, such as Kibana,
