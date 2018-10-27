@@ -54,15 +54,17 @@ KEYS=[ 'eth_dst', 'eth_src', 'highest_layer', 'info_line',
 class Repository:
 
     def __init__(self, actions_tsv, display_tsv,raw_datasets, schema=KEYS):
-        self.actions = pd.read_csv(actions_tsv, sep = '\t', escapechar='\\')
-        self.displays = pd.read_csv(display_tsv, sep = '\t', escapechar='\\')
+        self.actions = pd.read_csv(actions_tsv, sep = '\t', escapechar='\\', keep_default_na=False)
+        self.displays = pd.read_csv(display_tsv, sep = '\t', escapechar='\\', keep_default_na=False)
         self.actions.action_params= self.actions.action_params.apply(get_dict)
         #self.actions.bag= self.actions.bag.apply(get_dict)
         self.displays.granularity_layer= self.displays.granularity_layer.apply(get_dict)
         self.displays.data_layer= self.displays.data_layer.apply(get_dict)
         self.schema=schema
         self.data = []
-        for f in os.listdir(raw_datasets):
+        file_list=os.listdir(raw_datasets)
+        file_list.sort()
+        for f in file_list:
             path = os.path.join(raw_datasets,f)
             df = pd.read_csv(path, sep = '\t', index_col=0)
             self.data.append(df)
@@ -119,6 +121,22 @@ class Repository:
             
         agg_df = df_gb.agg(agg_dict)
         return df_gb, agg_df
+
+    def get_raw_display2(self, display_id, pd_group=False):
+        row=self.get_display_by_id(display_id)
+        raw_df = self.__get_filtered_df(row["project_id"], json.loads(row["filtering"]))
+        if type(row["aggregations"]) == float:
+            if math.isnan(row["aggregations"]):
+                df_gb, agg_df = self.__get_groupby_df(raw_df,json.loads(row["grouping"]), None)
+            else:
+                df_gb, agg_df = self.__get_groupby_df(raw_df,json.loads(row["grouping"]), json.loads(row["aggregations"]))
+        else:
+            df_gb, agg_df = self.__get_groupby_df(raw_df,json.loads(row["grouping"]), json.loads(row["aggregations"]))
+        if pd_group:
+            return raw_df, df_gb
+        else:
+            return raw_df, agg_df
+
 
     def get_raw_display(self, display_id, pd_group=False):
         row=self.get_display_by_id(display_id)
