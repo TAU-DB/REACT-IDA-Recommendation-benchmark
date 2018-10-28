@@ -1,5 +1,5 @@
 	captured_length	eth_dst	eth_src	highest_layer	info_line	interface_captured	ip_dst	ip_src	length	number	project_id	sniff_timestamp	tcp_dstport	tcp_srcport	tcp_stream
-0	342	ff:ff:ff:ff:ff:ff	08:00:27:91:fd:44	BOOTP	DHCP Discover - Transaction ID 0xe24df52	255.255.255.255	0.0.0.0	342	1	3	2010-01-01 02:00:29			
+0	342	ff:ff:ff:ff:ff:ff	08:00:27:91:fd:44	BOOTP	DHCP Discover - Transaction ID 0xe24df52		255.255.255.255	0.0.0.0	342	1	3	2010-01-01 02:00:29			
 1	590	08:00:27:91:fd:44	52:54:00:12:35:00	BOOTP	DHCP Offer    - Transaction ID 0xe24df52		10.0.2.15	10.0.2.2	590	2	3	2010-01-01 02:00:29			
 2	368	ff:ff:ff:ff:ff:ff	08:00:27:91:fd:44	BOOTP	DHCP Request  - Transaction ID 0xe24df52		255.255.255.255	0.0.0.0	368	3	3	2010-01-01 02:00:29			
 3	590	08:00:27:91:fd:44	52:54:00:12:35:00	BOOTP	DHCP ACK      - Transaction ID 0xe24df52		10.0.2.15	10.0.2.2	590	4	3	2010-01-01 02:00:29			

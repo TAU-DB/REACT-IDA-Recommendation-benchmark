@@ -1,5 +1,5 @@
 	captured_length	eth_dst	eth_src	highest_layer	info_line	interface_captured	ip_dst	ip_src	length	number	project_id	sniff_timestamp	tcp_dstport	tcp_srcport	tcp_stream
-0	74	70:5a:b6:51:d7:b2	00:23:8b:82:1f:4a	TCP	46104→80 [SYN] Seq=0 Win=5840 Len=0 MSS=1460 SACK_PERM=1 TSval=3299940 TSecr=0 WS=64	10.42.42.50	10.42.42.253	74	1	4	2010-02-03 01:34:06	80.0	46104.0	0.0
+0	74	70:5a:b6:51:d7:b2	00:23:8b:82:1f:4a	TCP	46104→80 [SYN] Seq=0 Win=5840 Len=0 MSS=1460 SACK_PERM=1 TSval=3299940 TSecr=0 WS=64		10.42.42.50	10.42.42.253	74	1	4	2010-02-03 01:34:06	80.0	46104.0	0.0
 1	60	00:23:8b:82:1f:4a	70:5a:b6:51:d7:b2	TCP	80 > 46104 [RST, ACK] Seq=1 Ack=1 Win=0 Len=0		10.42.42.253	10.42.42.50	60	2	4	2010-02-03 01:34:06	46104.0	80.0	0.0
 2	74	00:26:22:cb:1e:79	00:23:8b:82:1f:4a	TCP	59856 > 80 [SYN] Seq=0 Win=5840 Len=0 MSS=1460 SACK_PERM=1 TSval=3300092 TSecr=0 WS=64		10.42.42.56	10.42.42.253	74	3	4	2010-02-03 01:34:07	80.0	59856.0	1.0
 3	74	00:16:cb:92:6e:dc	00:23:8b:82:1f:4a	TCP	40921 > 80 [SYN] Seq=0 Win=5840 Len=0 MSS=1460 SACK_PERM=1 TSval=3300092 TSecr=0 WS=64		10.42.42.25	10.42.42.253	74	4	4	2010-02-03 01:34:07	80.0	40921.0	2.0

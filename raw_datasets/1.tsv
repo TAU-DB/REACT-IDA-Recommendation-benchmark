@@ -1,5 +1,5 @@
 	captured_length	eth_dst	eth_src	highest_layer	info_line	interface_captured	ip_dst	ip_src	length	number	project_id	sniff_timestamp	tcp_dstport	tcp_srcport	tcp_stream
-0	66	00:26:b9:2b:0b:59	00:0c:29:54:bf:79	TCP	8888→34374 [ACK] Seq=1 Ack=1 Win=65535 Len=0 TSval=6446 TSecr=159921662	192.168.1.1	192.168.1.122	66	1	1	2013-06-02 10:19:14	34374.0	8888.0	0.0
+0	66	00:26:b9:2b:0b:59	00:0c:29:54:bf:79	TCP	8888→34374 [ACK] Seq=1 Ack=1 Win=65535 Len=0 TSval=6446 TSecr=159921662		192.168.1.1	192.168.1.122	66	1	1	2013-06-02 10:19:14	34374.0	8888.0	0.0
 1	74	00:26:b9:2b:0b:59	00:0c:29:54:bf:79	ICMP	Echo (ping) request  id=0x0200, seq=256/1, ttl=128		1.2.3.4	192.168.1.122	74	2	1	2013-06-02 10:19:15			
 2	75	00:26:b9:2b:0b:59	00:0c:29:54:bf:79	ICMP	Echo (ping) request  id=0x0200, seq=512/2, ttl=128		82.108.24.168	192.168.1.122	75	3	1	2013-06-02 10:19:19			
 3	75	00:26:b9:2b:0b:59	00:0c:29:54:bf:79	ICMP	Echo (ping) request  id=0x0200, seq=768/3, ttl=128		82.108.25.192	192.168.1.122	75	4	1	2013-06-02 10:19:19			
