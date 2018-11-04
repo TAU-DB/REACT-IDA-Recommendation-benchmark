@@ -7,7 +7,7 @@ import numpy as np
 import ast
 import os
 import operator
-from lib.distance import action_distance, display_distance
+from .distance import action_distance, display_distance
 
 def get_dict(dict_str):
     if type(dict_str) is not str:
