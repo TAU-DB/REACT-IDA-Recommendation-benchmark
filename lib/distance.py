@@ -40,14 +40,14 @@ def gran_distance(gl1, gl2, scale=True):
     agg_attr2 = set(gl2['agg_attrs'].keys())
     agg_intersection = agg_attr1.intersection(agg_attr2)
     agg_diff_size = len(agg_attr1.union(agg_attr2) - agg_intersection)
-    agg_nve_diff = agg_diff_size
+    agg_nve_diff = agg_diff_size  # NVE = normalized value entropy
     for agg_column in agg_intersection:
         v1 = gl1['agg_attrs'][agg_column]
         v2 = gl2['agg_attrs'][agg_column]
         if v1 == v2:
             continue
         else:
-            agg_nve_diff = 1 - min(v1, v2) / max(v1, v2)
+            agg_nve_diff += 1 - min(v1, v2) / max(v1, v2)
 
     col_gran_distance = group_diff_size + agg_nve_diff
     normed_gran_distance = 2 * col_gran_distance / (len(group_attr1)
