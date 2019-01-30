@@ -79,9 +79,12 @@ def display_distance(disp_data1, disp_data2, method="all"):
     gran1 = disp_data1["granularity_layer"]
     gran2 = disp_data2["granularity_layer"]
 
-    if pd.isnull(gran1) and pd.isnull(gran2):
+    gran1_is_none = (gran1 is None)
+    gran2_is_none = (gran2 is None)
+
+    if gran1_is_none and gran2_is_none:  # pd.isnull(gran1) and pd.isnull(gran2):
         granularity_distance = 0.0
-    elif pd.isnull(gran1) or pd.isnull(gran2):
+    elif gran1_is_none or gran2_is_none:  # pd.isnull(gran1) or pd.isnull(gran2):
         granularity_distance = 1.0
     else:
         granularity_distance = gran_distance(gran1, gran2)
