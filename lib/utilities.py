@@ -87,17 +87,17 @@ class Repository:
             ["action_type", "action_params", "parent_display_id", "child_display_id"]]
 
     @staticmethod
-    def static_get_session_actions_by_id_all_rows(session_id, actions_df):
+    def static_get_session_actions_by_id_all_columns(session_id, actions_df):
         '''
         Returns a DataFrame containing all action
-        rows correspoding to this session_id
+        coloumns correspoding to this session_id
         '''
         return actions_df[actions_df['session_id'] == session_id]
 
-    def get_session_actions_by_id_all_rows(self, session_id):
+    def get_session_actions_by_id_all_columns(self, session_id):
         '''
         Returns a DataFrame containing all action
-        rows correspoding to this session_id
+        coloumns correspoding to this session_id
         '''
         return self.actions[self.actions['session_id'] == session_id]
 
@@ -166,7 +166,7 @@ class Repository:
     def add_back_actions_to_session(self, session_df):
         '''
         session_df: a DataFrame containing the columns "parent_display_id" and "child_display_id"
-        of the all tuples of some session with  and  of some seesion (e.g. by calling get_session_actions_by_id_all_rows)
+        of the all tuples of some session with  and  of some seesion (e.g. by callingget_session_actions_by_id_all_columns)
         '''
         session_df = session_df.reset_index(drop=True)
         session_id, user_id, project_id, solution = tuple(
@@ -264,7 +264,7 @@ class Repository:
 
         # convert each actions session to ATENA
         for session_id in session_ids:
-            converted_df = self.convert_session_df_to_atena(self.get_session_actions_by_id_all_rows(session_id))
+            converted_df = self.convert_session_df_to_atena(self.get_session_actions_by_id_all_columns(session_id))
             sessions_dfs.append(converted_df)
 
         return pd.concat(sessions_dfs).reset_index(drop=True)
